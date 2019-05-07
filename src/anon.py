@@ -53,8 +53,18 @@ fact = (λf: λn: iszero(n)(λ: one)(λ: (mult(n)(f(f)(pred(n))))))\
        (λf: λn: iszero(n)(λ: one)(λ: (mult(n)(f(f)(pred(n))))))
 
 print('-'*10)
-print(fact(zero)(incr)(0))
-print(fact(one)(incr)(0))
-print(fact(two)(incr)(0))
-print(fact(three)(incr)(0))
-print(fact(four)(incr)(0))
+
+
+print(
+        (λf: λn: iszero(n)(λ: one)(λ: (mult(n)(f(f)(pred(n))))))\
+        (λf: λn: iszero(n)(λ: one)(λ: (mult(n)(f(f)(pred(n))))))\
+        (five)
+     )
+
+# Of course in order to see it in python you'll need the counter trick
+print(
+        (λf: λn: iszero(n)(λ: one)(λ: (mult(n)(f(f)(pred(n))))))\
+        (λf: λn: iszero(n)(λ: one)(λ: (mult(n)(f(f)(pred(n))))))\
+        (five)\
+        (incr)(0)
+     )

@@ -28,7 +28,6 @@ def factorial(n):
         return 1
     return n * factorial(n-1)
 
-print(factorial(4))
 # ================ pure implementation
 fact = λn: iszero(n)\
            (one)\
@@ -46,4 +45,11 @@ iszero = λn: n(λf:lazy_false)(lazy_true)
 fact = λn: iszero(n)\
         (λ: one)\
         (λ: (mult(n)(fact(pred(n)))))
-print(fact(five)(incr)(0))
+
+
+# =============== let's check if our implementation works as expected
+print(fact(zero)(incr)(0) == factorial(0))
+print(fact(one)(incr)(0) == factorial(1))
+print(fact(two)(incr)(0) == factorial(2))
+print(fact(three)(incr)(0) == factorial(3))
+print(fact(four)(incr)(0) == factorial(4))

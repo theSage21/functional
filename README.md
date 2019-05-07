@@ -10,3 +10,4 @@ Exploring functional programming via Python.
 4. [More Numbers](src/more_num.py)
 5. [Conditions](src/conditions.py)
 6. [Factorial](src/factorial.py)
+7. [No names. Anon functions](src/anon.py)
